@@ -20,7 +20,7 @@ export const fetchStockData = async () => {
         console.error(`No time series data for ${symbol}`);
         continue;
       }
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 20; i++) {
         const latestTimestamp = Object.keys(timeSeries)[i];
         const latestData = timeSeries[latestTimestamp];
         const open = parseFloat(latestData["1. open"]);
