@@ -6,11 +6,6 @@ import { setSymbol } from "../store/actions/stockActions";
 
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
-  const dispatch = useDispatch();
-
-  const changeSymbol = (symbol: string) => {
-    dispatch(setSymbol(symbol));
-  };
 
   return (
     <div>
@@ -20,7 +15,6 @@ const HomePage = () => {
       <Modal
         show={showModal}
         onClose={() => setShowModal(false)}
-        onChangeSymbol={changeSymbol}
       />
     </div>
   );
